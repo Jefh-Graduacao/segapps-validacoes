@@ -48,11 +48,6 @@ Como já informado, a segunda validação foi feita usando _whitelist_. E a vali
 
 Para conseguir fazer uma implementação realmente funcional de _whitelist_ seria necessário listar **todas as entradas  válidas** para o programa. Isso consumiria Gigabytes de dados, mesmo para uma informação simples como um CPF.
 
-* 9 caracteres por linha (1 caracter = 1 byte)
-* 199.999.999.998 linhas
-* 1.800.000.000.000 bytes
-* ~1.800 Gigabyte
-
 Além de ser um enorme trabalho para desenvolvimento e aumentar a dificuldade de manutenção, a leitura deste arquivo gigante é um processo lento e prejudica muito a experiência de uso do programa.
 
 > 💡 O arquivo de whitelist usado neste exemplo apenas contém 2048 entradas. Então, o mesmo deve ser editado para validar uma entrada específica.
