@@ -16,15 +16,9 @@ if (args is not { Length: 2 })
 var entrada = args[1];
 var entradaVálida = args[0] switch
 {
-    "regex" => ValidarComRegex(entrada),
-    "whitelist" => ValidarComWhitelist(entrada),
+    "regex" => regexCpf.IsMatch(entrada),
+    "whitelist" => File.ReadAllLines(caminhoArquivoWhitelist).Contains(entrada),
     _ => throw new Exception($"Tipo de validação deve ser 'regex' ou 'whitelist'")
 };
 
 WriteLine($"'{entrada}' é um CPF {(entradaVálida ? "válido" : "inválido")}");
-
-bool ValidarComRegex(string entrada)
-    => regexCpf.IsMatch(entrada);
-
-bool ValidarComWhitelist(string entrada)
-    => File.ReadAllLines(caminhoArquivoWhitelist).Contains(entrada);
