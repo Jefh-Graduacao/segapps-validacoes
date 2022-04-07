@@ -16,7 +16,7 @@ Crie uma expressão regular para validar cada um dos seguintes tipos de entrada:
     ```
 * Endereço IPv4  
     ```regexp
-    ^((25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])(\.|$)){4}$
+    ^((25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])$
     ```
 
 ## Atividade 2
