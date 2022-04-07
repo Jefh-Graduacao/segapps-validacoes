@@ -1,6 +1,7 @@
 ## Atividade 1
 
 Crie uma expressão regular para validar cada um dos seguintes tipos de entrada:  
+
 * Data (no formato dd/mm/aaaa)  
     ```regexp
     ^(0?[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[12])\/(\d{4})$
@@ -20,9 +21,11 @@ Crie uma expressão regular para validar cada um dos seguintes tipos de entrada:
 
 ## Atividade 2
 
-> Escolha um tipo de dado de entrada do exercício anterior (por exemplo, endereço IP):
-> * Implemente um programa que receba o dado como entrada e o valide. O programa deve possuir 2 versões: uma que valida a entrada com expressões regulares e outra que valide com outro método (por exemplo, whitelist/blacklist ou filtragem). A implementação pode ser feita em qualquer linguagem de programação.
-> * Após implementar os programas, responda: qual tipo de validação de entrada é mais robusto? Justifique sua resposta.
+Escolha um tipo de dado de entrada do exercício anterior (por exemplo, endereço IP):
+* Implemente um programa que receba o dado como entrada e o valide. O programa deve possuir 2 versões: uma que valida a entrada com expressões regulares e outra que valide com outro método (por exemplo, whitelist/blacklist ou filtragem). A implementação pode ser feita em qualquer linguagem de programação.
+* Após implementar os programas, responda: qual tipo de validação de entrada é mais robusto? Justifique sua resposta.
+
+### Sobre a implementação
 
 Decidi implementar uma validação de CPF. A implementação foi feita no mesmo programa, o tipo de validação e os dados devem ser fornecidos via argumentos de linha de comando.
 
@@ -38,6 +41,8 @@ Por exemplo, para fazer uma validação do CPF **011.291.234-23** usando **regex
 $> dotnet run regex 011.291.234-23
 011.291.234-23 é um CPF válido
 ```
+
+### Tipo de validação mais robusto
 
 Como já informado, a segunda validação foi feita usando _whitelist_. E a validação usando regex é mais robusta em termos de desenvolvimento/manutenção e de tempo de execução. 
 
